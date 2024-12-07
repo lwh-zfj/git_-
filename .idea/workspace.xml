@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，修订提交">
-      <change beforePath="$PROJECT_DIR$/Git常规_picture_src_003.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Git常规_picture_src_003.docx" afterDir="false" />
+    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，修订提交 到 3.3.6章节">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733451555531</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="git学习笔记，修订提交 到 3.3.6章节">
+      <created>1733553698191</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733553698191</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +149,7 @@
     <MESSAGE value="gitignore文件提交" />
     <MESSAGE value="29-git远程仓库git指令速查-git流程， 学习视频提交&#10;&#10;(cherry picked from commit d72bc7ff7a2df391a89b10f9456e4a175f8536e3)" />
     <MESSAGE value="git学习笔记，修订提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，修订提交" />
+    <MESSAGE value="git学习笔记，修订提交 到 3.3.6章节" />
+    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，修订提交 到 3.3.6章节" />
   </component>
 </project>
