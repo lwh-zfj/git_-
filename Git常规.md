@@ -259,11 +259,86 @@ git status
 
 ### 3.3.3 提交暂存区到本地仓库（commit）
 
-### 3.3.4 查看提交日志（log）
+- 作用：提交暂存区内容到本地仓库的当前分支
+- 命令形式：git commit -m '注释内容'
+
+```shell
+git commit -m '注释内容'
+```
+
+
+
+
+
+### 3.3.4 *查看提交日志（log）
+
+**在3.1.3中配置的别名git-log 就包含了这些参数，所以后续可以直接使用指令git-log**
+
+- 作用：查看提交记录
+- 命令形式：git log [option]
+
+​          Options ：
+
+				- --all 显示所有分支
+				- --pretty=oneline 将提交信息显示为一行
+				- --abbrev-commit 使得输出的commitId更简短
+				- --graph 以图的形式显示
+
+
+
+
+
+
+
+
+
+
 
 ### 3.3.5 版本回退
 
+- 作用：版本切换
+- 命令形式：git reset --hard commitID
+
+```shell
+git reset --hard commitID
+```
+
+ *commitID可以使用git-log或者git log指令查看
+
+- 如何查看已经删除的记录？
+
+- [ ] ​	git reflog
+
+```shell
+git reflog
+```
+
+
+
+- [ ]    这个指令可以看到已经删除的提交记录
+
+
+
 ### 3.3.6 添加文件至忽略列表
+
+一般我们总会有些文件无需纳入Git的管理，也不希望它们总出现在未跟踪文件列表。通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。在这种情况下，我们可以在工作目录中创建一个名为.gitignore的文件（文件名称固定），列举出忽略的文件模式。下面是一个示例：
+
+![git_ignore](./image/git_ignore.png)
+
+```txt
+备注说明：这里的命令git add . 是指的把当前目录的所有文件都加入到暂存区。你也可以使用 git add test001.txt ，表示的是把文件 test001.txt 放入到暂存区！！！
+
+
+备注：这里的命令： git commit -m “add file01” 表示的是把文件提交到本地仓库，同时写好提交的的message信息。
+
+
+备注：这里的命令： git log  指令可以看到提交的日志记录信息！！！
+
+
+
+```
+
+
 
 练习:基础操作
 
