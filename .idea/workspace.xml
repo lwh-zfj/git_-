@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，修订提交 到 3.3.6章节">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lwh-zfj &lt;352409893@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="windows-git-dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2pTmSThnKiCbaZAb8Rl10Gsq5fM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/video" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="" />
+      <created>1732798438844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732798438844</updated>
+    </task>
+    <task id="LOCAL-00001" summary="01-学习目标 学习视频提交">
+      <created>1732798625275</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732798625275</updated>
+    </task>
+    <task id="LOCAL-00002" summary="git使用常规操作，学习笔记记录">
+      <created>1733300509196</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733300509196</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Git常规_picture_src_001,截图学习，截图范围：01学习目标 ～ 03_svn_git">
+      <created>1733330863592</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733330863592</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Git常规_picture_src_002,截图学习，截图范围：04_git工作流程简述 ～ 06_获取本地仓库">
+      <created>1733331011663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733331011663</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Git常规_picture_src_003,截图学习，截图范围：07_git常用指令">
+      <created>1733331088775</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733331088775</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Git常规_picture_src模版文档提交">
+      <created>1733331389375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733331389375</updated>
+    </task>
+    <task id="LOCAL-00007" summary="gitignore文件提交">
+      <created>1733331894047</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733331894047</updated>
+    </task>
+    <task id="LOCAL-00008" summary="29-git远程仓库git指令速查-git流程， 学习视频提交&#10;&#10;(cherry picked from commit d72bc7ff7a2df391a89b10f9456e4a175f8536e3)">
+      <created>1733332620255</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733332620255</updated>
+    </task>
+    <task id="LOCAL-00009" summary="git学习笔记，修订提交">
+      <created>1733451555531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733451555531</updated>
+    </task>
+    <task id="LOCAL-00010" summary="git学习笔记，修订提交 到 3.3.6章节">
+      <created>1733553698191</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733553698191</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="63" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="88" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="33" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="01-学习目标 学习视频提交" />
+    <MESSAGE value="git使用常规操作，学习笔记记录" />
+    <MESSAGE value="Git常规_picture_src_001,截图学习，截图范围：01学习目标 ～ 03_svn_git" />
+    <MESSAGE value="Git常规_picture_src_002,截图学习，截图范围：04_git工作流程简述 ～ 06_获取本地仓库" />
+    <MESSAGE value="Git常规_picture_src_003,截图学习，截图范围：07_git常用指令" />
+    <MESSAGE value="Git常规_picture_src模版文档提交" />
+    <MESSAGE value="gitignore文件提交" />
+    <MESSAGE value="29-git远程仓库git指令速查-git流程， 学习视频提交&#10;&#10;(cherry picked from commit d72bc7ff7a2df391a89b10f9456e4a175f8536e3)" />
+    <MESSAGE value="git学习笔记，修订提交" />
+    <MESSAGE value="git学习笔记，修订提交 到 3.3.6章节" />
+    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，修订提交 到 3.3.6章节" />
+  </component>
+</project>
