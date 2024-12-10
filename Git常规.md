@@ -342,77 +342,493 @@ git reflog
 
 练习:基础操作
 
+```shell
+#################################仓库初始化#########################
+# 创建目录（git_test01）并在目录下打开gitbash
+略
+# 初始化git仓库
+git init
+
+################################创建文件并且提交#######################
+# 目录下创建文件 file01.txt
+touch file01.txt
+
+# 将修改放到暂存区
+git add .
+
+# 将修改提交到本地仓库，提交记录内容为：commit 001
+git commit -m 'commit 001'
+
+# 查看日志
+git log
+
+############################修改文件并提交########################
+#修改file01的内容为：count=1
+使用vi编辑器修改
+
+# 将修改加入到暂存区
+git add .
+
+# 将修改提交到本地仓库，提交记录内容为： update file01
+git commit -m 'update file01'
+
+# 查看日志
+git log
+
+# 以精简的方式显示提交记录
+git-log
+
+##########################将最后一次还原#####################
+# 查看提交记录
+git-log
+
+# 找到倒数第2次提交的commitID
+略
+
+# 版本回退
+git reset commitID --hard 
+或者
+git reset --hard commitID
+
+```
+
+
+
 ## 3.4 分支
+
+​	几乎所有的版本控制系统都以某种形式支持分支。使用分支意味着你可以把你的工作从开发主线上分离开来进行重大bug修改，开发新的功能，以免影响开发主线。
 
 ### 3.4.1 查看本地分支
 
+- 命令：git branch
+
+  ```shell
+  git branch
+  ```
+
+  
+
 ### 3.4.2 创建本地分支
 
-### 3.4.4 切换分支（checkout）
+- 命令：git branch 分支名
 
-### 3.4.6 合并分支(merge)
+  ```shell
+  git branch 分支名
+  ```
+
+  
+
+### 3.4.4 *切换分支（checkout）
+
+- 命令：git checkout 分支名
+
+```shell
+git checkout 分支名
+```
+
+我们还可以切换到一个不存在的分支（创建并切换）
+
+- 命令：git checkout -b 分支名
+
+```shell
+git checkout -b 分支名
+```
+
+
+
+### 3.4.6 *合并分支(merge)
+
+一个分支上的提交可以合并到另一个分支
+
+- 命令：git merge 分支名称
+
+```shell
+git merge 分支名称
+```
+
+
 
 ### 3.4.7 删除分支
 
+***不能删除当前分支，只能删除其他分支***
+
+ git branch -d b1 删除分支时，需要做各种检查
+
+git branch -D b1 不做任何检查，强制删除
+
+```shell
+git branch -d b1 # 删除分支时，需要做各种检查
+git branch -D b1 # 不做任何检查，强制删除
+```
+
+
+
 ### 3.4.8 解决冲突
+
+当前两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时候就需要手动解决冲突，解决冲突步骤如下：
+
+1.处理文件中冲突的地方
+
+2.将解决完冲突的文件加入暂存区(add)
+
+3.提交到仓库(commit)
+
+冲突部分的内容处理如下所示：
+
+![git_conflict.png](./image/git_conflict.png)
+
+
 
 ### 3.4.9 开发中分支使用原则与流程
 
+几乎所有的版本控制系统都以某种形式支持分支。使用分支意味着你可以把你的工作从开发主线上分离来进行重大bug修改、开发新的功能，以免影响开发主线。
+
+在开发中，一般如下分支使用原则与流程：
+
+- master(生产)分支
+
+  线上分支，主分支，中小规模项目作为线上运行的应用对应的分支；
+
+- develop(开发)分支
+
+  是从master创建的分支，一般作为开发部门的主要开发分支，如果没有其他并行开发不同期上线要求，都可以在此版本进行开发，阶段开发完成后，需要合并到master分支，准备上线。
+
+- feature/xxx分支
+
+​		从develop创建的分支，一般是同期并行开发，但不同期上线时创建的分支，分支上的研发任务完成后合并到develop分支。
+
+- hotfix/xxxx分支。
+
+  	从master派生的分支，一般作为线上bug修复使用，修复完成后需要合并到master、test、develop分支。
+
+
+
+- 还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等等。
+
+![master_develop_hotfix.png](./image/master_develop_hotfix.png)
+
 练习:分支操作
 
-## 3.5 ？？？
+```shell
+############################创建并且切换到dev01分支，在dev01分支提交
+# [master]创建分支dev01
+git branch dev01
+# [master]切换到dev01
+git checkout dev01
+# [dev01]创建文件file02.txt
+touch file01.txt
+# [dev01]将修改加入暂存区并提交到仓库，提交记录内容为： add file02 on dev
+git add .
+git commit -m 'add file02 on dev'
+# [dev01] 以精简的方式显示提交记录
+git-log
+################################切换到master分支，将dev01合并到master分支
+# [dev01]切换到master分支
+git checkout master
+# [master]合并dev01到master分支
+git merge dev01
+# [master]以精简的方式显示提交记录
+git-log
+# [master]查看文件变化（目录下也出现了file02.txt）
+略
+################################删除dev01分支
+# [master]删除dev01分支
+git branch -d dev01
+# [master]以精简的方式显示提交记录
+git-log
+
+```
+
+
+
+## 3.5 今日总结
+
+
+
+- 工作区->暂存区。            git add .
+- 暂存区->仓库                   git commit -m 'commit message 01'
+- 查看状态                          git status
+- 查看提交记录                  git log               git-log
+- 版本回退（理解即可）    git reset --hard <commitID>
+- 查看分支                          git branch
+- 创建并切换分支               git checkout -b 分支名
+- 分支合并                          git merge 分支名
+
+​				- 分支合并第一步，首先要切换到目标分支，然后进行切换
+
+![git_summary1.png](./image/git_summary1.png)
+
+
+
+![git_summary2.png](./image/git_summary2.png)
+
+
 
 # 4、Git远程仓库
 
+---
+
 ## 4.1 常用的托管服务[远程仓库]
+
+```txt
+前面我们已经知道了Git中存在两种类型的仓库，即本地仓库和远程仓库，那么我们如何搭建Git远程仓库呢？我们可以借助互联网上提供的一些代码托管服务来实现，其中比较常用的有GitHub，码云、GitLab等。
+github(地址：https://github.com/)是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名github
+码云（地址：https://gitee.com/）是国内的一个代码托管平台，由于服务器在国内，所以相比较于GitHub，码云速度更快
+GitHub（地址：https://about.gitlab.com/）是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务，一般用于在企业、学校等内部网络搭建git私服。
+```
+
+
 
 ## 4.2 注册码云
 
+想要使用码云的相关服务，需要注册账号（地址：https://gitee.com/sigup）
+
+![git_regist.png](./image/git_regist.png)
+
 ## 4.3 创建远程仓库
 
+![git_create_rep.png](./image/git_create_rep.png)
+
+![git_create_rep.png](./image/git_create_rep1.png)
+
+![git_create_rep2.png](./image/git_create_rep2.png)
+
+
+
 ## 4.4 配置SSH公钥
+
+- 生成SSH公钥
+
+​			ssh-keygen -t rsa
+
+​            不断回车
+
+​					- 如果公钥已经存在，则自动覆盖
+
+			- Gitee设置账户共公钥
+
+​			获取公钥
+
+​					cat ~/.ssh/id_rsa.pub
+
+![git_ssh.png](./image/git_ssh.png)
+
+​						验证是否配置成功
+
+   						ssh -T git@gitee.com
 
 ## 4.5 操作远程仓库
 
 ### 4.5.1 添加远程仓库
 
+**此操作是先初始化本地库，然后与已创建的远程库进行对接。**
+
+- 命令：git remote add <远端名称><仓库路径>
+
+  - 远端名称，默认是origin，取决于远端服务器设置
+  - 仓库路径，从远端服务器获此URL
+  - 例如:git remote add origin git@gitee.com:czbk_zhang_meng/git_test.git
+
+  ![git_remote.png](./image/git_remote.png)
+
+```shell
+git remote add origin git@gitee.com:czbk_zhang_meng/git_test.git
+```
+
+备注：这里的意思是把本地仓库(git-test)推送到远程仓库,命令是 git remote add origin [git@gitee.com:czbk_zhang_meng/git_test.git](mailto:git@gitee.com:czbk_zhang_meng/git_test.git) 。依次解释：origin 是远程仓库的名字，一般情况下origin是固定的，大家都是这么取名字的。[git@gitee.com:czbk_zhang_meng/git_test.git](mailto:git@gitee.com:czbk_zhang_meng/git_test.git) 则是我们在浏览器中自己创建的远程仓库地址的哈。
+
+
+
 ### 4.5.2 查看远程仓库
+
+- 命令：git remote
+
+![git_remote1.png](./image/git_remote1.png)
+
+```shell
+git remote
+```
+
+备注：命令是查看远程仓库
 
 ### 4.5.3 推送到远程仓库
 
+- 命令：git push [-f] [--set-upstream] [远端名称]  [本地分支名] [:远端分支名]
+
+  - 如果远程分支名和本地分支名称相同，则可以只写本地分支
+
+    - git push origin master
+
+      ```shell
+      git push origin master
+      ```
+
+      
+
+  - --set-upstream推送到远端的同时并且建立起和远端分支的关联关系。
+
+    - git push --set-upstream origin master
+
+    ```shell
+    git push --set-upstream origin master
+    ```
+
+    ![git_push_set_upstream.png](./image/git_push_set_upstream.png)
+
+  - 如果当前分支已经和远端分支关联，则可以省略分支名和远端名。
+
+    - git push 将master分支推送到已关联的远端分支。
+
+![git_push_set_upstream1.png](./image/git_push_set_upstream1.png)
+
 ### 4.5.4 本地分支与远程分支的关联关系
+
+- 查看关联关系我们可以使用 git branch --vv命令
+
+```shell
+git branch --vv
+```
+
+![git_branch_vv.png](./image/git_branch_vv.png)
 
 ### 4.5.5 从远程仓库克隆
 
+如果已经有一个远端仓库，我们可以直接clone到本地。
+
+- 命令git clone <仓库路径>[本地目录]
+
+​			-本地目录可以省略，会自动生成一个目录 
+
+![git_clone.png](./image/git_clone.png)
+
+
+
 ### 4.5.6 从远程仓库中抓取和拉取
+
+远程分支和本地分支一样，我们可以进行merge操作，只是需要先把远端仓库里的更新都下载到本地，再进行操作。
+
+- 抓取命令： git fetch [remote name] [branch name]
+
+​		- **抓取指令就是将仓库里的更新都抓取到本地，不会进行合并**
+
+​		- 如果不指定远端名称和分支名，则抓取所有分支。
+
+- 拉取命令：git pull [remote name] [branch name]
+
+​		- **拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge**
+
+​		- 如果不指定远端名称和分支名，则抓取所有并且更新当前分支。
+
+1.在test01这个本地仓库进行一次提交并推送到远程仓库
+
+![git_fetch.png](./image/git_fetch.png)
+
+![git_fetch2.png](./image/git_fetch2.png)
 
 ### 4.5.7 解决合并冲突
 
-练习:远程仓库操作
+在一段时间，A、B用户修改了同一个文件，并且修改了同一行位置的代码，此时会发生合并冲突。
+
+A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要推送到远程仓库，此时B用户晚于A用户，**故需要先拉取远程仓库的提交，经过合并后才能推送到远端分支**，如下图所示。
+
+![git_push_1_2.png](./image/git_push_1_2.png)
+
+在B用户拉取代码时，因为A、B用户同一段时间修改了同一个文件的相同位置代码，故会产生合并冲突。
+
+**远程分支也是分支，所以合并时冲突的解决方式也和解决本地分支冲突相同**，在此不再赘述，需要自己多多练习。
+
+
+
+**练习:远程仓库操作**
+
+```shell
+###############################1-将本地仓库推送到远程仓库
+# 完成4.1 、4.2、4.3、4.4的操作
+略
+# [git_test01] 添加远程仓库
+git remote add origin git@gitee.com/**/**.git
+# [git_test01] 将master分支推送到远程仓库，并与远程仓库的master分支绑定关联关系
+git push --set-upstream origin master
+############################2-将远程分支克隆到本地
+# 将远程仓库克隆到本地git_test02目录下
+git clone git@gitee.com/**/**.git git_test02
+# [git_test02]以精简的方式显示提交记录
+git-log
+#################################3-将本地修改推送到远程仓库
+#[git_test01]创建文件file03.txt
+touch file03.txt
+#[git_test01]将修改加入暂存区并提交到仓库，提交记录内容为：add file03
+git add .
+git commit -m 'add file03'
+#[git_test01]将master分支的修改推送到仓库
+git push origin master
+###############################4-将远程仓库的修改更新到本地
+#[git_test02]将远程仓库修改再拉取到本地
+git pull
+#以精简的方式显示提交记录
+git-log
+#查看文件变化（目录下也出现了file03.txt）
+略
+
+```
 
 # 5 在Idea中使用Git
 
+---
+
+
+
 ## 5.1 在Idea中配置Git
+
+安装好IntelliJ IDEA后，如果Git安装在默认路径下，那么idea会自动找到git的位置，如果更改了Git的安装位置则需要手动配置下Git的路径。选择File-》settings打开设置窗口，找到Version Control下的git选项：
+
+![git_idea_set01.png](git_idea_set01.png)
+
+![git_idea_set02.png](git_idea_set02.png)
+
+
 
 ## 5.2 在Idea中操作Git
 
+场景：本地已经有一个项目，但是并不是git项目，我们需要将这个放到码云的仓库里，和其他开发人员继续一起协作开发。
+
 ### 5.2.1 创建项目远程仓库（参照4.3）
+
+![git_create_newrep.png](./image/git_create_newrep.png)
+
+![git_create_newrep2.png](./image/git_create_newrep2.png)
 
 ### 5.2.2 初始化本地仓库
 
+![git_init_rep.png](./image/git_init_rep.png)
+
 ### 5.2.3 设置远程仓库
+
+略
 
 ### 5.2.4 提交到本地仓库
 
+![git_commit_rep.png](./image/git_commit_rep.png)
+
 ### 5.2.6 推送到远程仓库
+
+略
 
 ### 5.2.7 克隆远程仓库到本地
 
+略
+
 ### 5.2.8 创建分支
+
+略
 
 ### 5.2.9 切换分支及其他分支相关操作
 
+![git_checkout_branch.png](./image/git_checkout_branch.png)
+
 ### 5.2.11 解决冲突
+
+![git_resolve_conflict.png](./image/git_resolve_conflict.png)
 
 ## 5.3 IDEA常用GIT操作入口
 
