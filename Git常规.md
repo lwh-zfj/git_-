@@ -683,37 +683,152 @@ git remote
 
 ### 4.5.4 本地分支与远程分支的关联关系
 
+- 查看关联关系我们可以使用 git branch --vv命令
+
+```shell
+git branch --vv
+```
+
+![git_branch_vv.png](./image/git_branch_vv.png)
+
 ### 4.5.5 从远程仓库克隆
+
+如果已经有一个远端仓库，我们可以直接clone到本地。
+
+- 命令git clone <仓库路径>[本地目录]
+
+​			-本地目录可以省略，会自动生成一个目录 
+
+![git_clone.png](./image/git_clone.png)
+
+
 
 ### 4.5.6 从远程仓库中抓取和拉取
 
+远程分支和本地分支一样，我们可以进行merge操作，只是需要先把远端仓库里的更新都下载到本地，再进行操作。
+
+- 抓取命令： git fetch [remote name] [branch name]
+
+​		- **抓取指令就是将仓库里的更新都抓取到本地，不会进行合并**
+
+​		- 如果不指定远端名称和分支名，则抓取所有分支。
+
+- 拉取命令：git pull [remote name] [branch name]
+
+​		- **拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge**
+
+​		- 如果不指定远端名称和分支名，则抓取所有并且更新当前分支。
+
+1.在test01这个本地仓库进行一次提交并推送到远程仓库
+
+![git_fetch.png](./image/git_fetch.png)
+
+![git_fetch2.png](./image/git_fetch2.png)
+
 ### 4.5.7 解决合并冲突
 
-练习:远程仓库操作
+在一段时间，A、B用户修改了同一个文件，并且修改了同一行位置的代码，此时会发生合并冲突。
+
+A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要推送到远程仓库，此时B用户晚于A用户，**故需要先拉取远程仓库的提交，经过合并后才能推送到远端分支**，如下图所示。
+
+![git_push_1_2.png](./image/git_push_1_2.png)
+
+在B用户拉取代码时，因为A、B用户同一段时间修改了同一个文件的相同位置代码，故会产生合并冲突。
+
+**远程分支也是分支，所以合并时冲突的解决方式也和解决本地分支冲突相同**，在此不再赘述，需要自己多多练习。
+
+
+
+**练习:远程仓库操作**
+
+```shell
+###############################1-将本地仓库推送到远程仓库
+# 完成4.1 、4.2、4.3、4.4的操作
+略
+# [git_test01] 添加远程仓库
+git remote add origin git@gitee.com/**/**.git
+# [git_test01] 将master分支推送到远程仓库，并与远程仓库的master分支绑定关联关系
+git push --set-upstream origin master
+############################2-将远程分支克隆到本地
+# 将远程仓库克隆到本地git_test02目录下
+git clone git@gitee.com/**/**.git git_test02
+# [git_test02]以精简的方式显示提交记录
+git-log
+#################################3-将本地修改推送到远程仓库
+#[git_test01]创建文件file03.txt
+touch file03.txt
+#[git_test01]将修改加入暂存区并提交到仓库，提交记录内容为：add file03
+git add .
+git commit -m 'add file03'
+#[git_test01]将master分支的修改推送到仓库
+git push origin master
+###############################4-将远程仓库的修改更新到本地
+#[git_test02]将远程仓库修改再拉取到本地
+git pull
+#以精简的方式显示提交记录
+git-log
+#查看文件变化（目录下也出现了file03.txt）
+略
+
+```
 
 # 5 在Idea中使用Git
 
+---
+
+
+
 ## 5.1 在Idea中配置Git
+
+安装好IntelliJ IDEA后，如果Git安装在默认路径下，那么idea会自动找到git的位置，如果更改了Git的安装位置则需要手动配置下Git的路径。选择File-》settings打开设置窗口，找到Version Control下的git选项：
+
+![git_idea_set01.png](git_idea_set01.png)
+
+![git_idea_set02.png](git_idea_set02.png)
+
+
 
 ## 5.2 在Idea中操作Git
 
+场景：本地已经有一个项目，但是并不是git项目，我们需要将这个放到码云的仓库里，和其他开发人员继续一起协作开发。
+
 ### 5.2.1 创建项目远程仓库（参照4.3）
+
+![git_create_newrep.png](./image/git_create_newrep.png)
+
+![git_create_newrep2.png](./image/git_create_newrep2.png)
 
 ### 5.2.2 初始化本地仓库
 
+![git_init_rep.png](./image/git_init_rep.png)
+
 ### 5.2.3 设置远程仓库
+
+略
 
 ### 5.2.4 提交到本地仓库
 
+![git_commit_rep.png](./image/git_commit_rep.png)
+
 ### 5.2.6 推送到远程仓库
+
+略
 
 ### 5.2.7 克隆远程仓库到本地
 
+略
+
 ### 5.2.8 创建分支
+
+略
 
 ### 5.2.9 切换分支及其他分支相关操作
 
+![git_checkout_branch.png](./image/git_checkout_branch.png)
+
 ### 5.2.11 解决冲突
+
+![git_resolve_conflict.png](./image/git_resolve_conflict.png)
 
 ## 5.3 IDEA常用GIT操作入口
 
