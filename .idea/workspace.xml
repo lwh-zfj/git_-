@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，修订提交 到 3.3.6章节">
+    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，学习记录到5.2图片上传">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +20,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="windows-git-dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,10 +33,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/video" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="git_learn" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="git_learn" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733553698191</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="git学习笔记，学习记录到5.2图片上传">
+      <created>1733803496978</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733803496978</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +179,7 @@
     <MESSAGE value="29-git远程仓库git指令速查-git流程， 学习视频提交&#10;&#10;(cherry picked from commit d72bc7ff7a2df391a89b10f9456e4a175f8536e3)" />
     <MESSAGE value="git学习笔记，修订提交" />
     <MESSAGE value="git学习笔记，修订提交 到 3.3.6章节" />
-    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，修订提交 到 3.3.6章节" />
+    <MESSAGE value="git学习笔记，学习记录到5.2图片上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，学习记录到5.2图片上传" />
   </component>
 </project>
