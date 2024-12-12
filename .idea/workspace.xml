@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git学习笔记，学习记录到5.2图片上传">
+    <list default="true" id="d392a80e-ed13-4133-86e9-523042e35aaf" name="Changes" comment="git笔记记录增加、修改">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_5,_00_53_[Changes]/Git常规_picture_src.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_5,_00_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_5__00_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_4,_16_28_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_4__16_28__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_00_54_[Changes]/Git常规_picture_src.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_00_54_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_00_58_[Changes]/Git常规_picture_src.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_00_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_01_00_[Changes]/Git常规_picture_src.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5,_01_00_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5__00_54__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5__00_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_12_5__01_00__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +160,35 @@
       <option name="project" value="LOCAL" />
       <updated>1733803496978</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="git学习笔记，相关图片上传">
+      <created>1733985469809</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733985469809</updated>
+    </task>
+    <task id="LOCAL-00013" summary="GIT实战-基于GIT的项目代码下发.md 文档笔记记录">
+      <created>1733985633014</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733985633014</updated>
+    </task>
+    <task id="LOCAL-00014" summary="git常用指令速查.txt 文档笔记记录">
+      <created>1733985656569</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733985656569</updated>
+    </task>
+    <task id="LOCAL-00015" summary="git笔记记录增加、修改">
+      <created>1733985672870</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733985672870</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +222,10 @@
     <MESSAGE value="git学习笔记，修订提交" />
     <MESSAGE value="git学习笔记，修订提交 到 3.3.6章节" />
     <MESSAGE value="git学习笔记，学习记录到5.2图片上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="git学习笔记，学习记录到5.2图片上传" />
+    <MESSAGE value="git学习笔记，相关图片上传" />
+    <MESSAGE value="GIT实战-基于GIT的项目代码下发.md 文档笔记记录" />
+    <MESSAGE value="git常用指令速查.txt 文档笔记记录" />
+    <MESSAGE value="git笔记记录增加、修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="git笔记记录增加、修改" />
   </component>
 </project>
