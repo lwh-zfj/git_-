@@ -12,10 +12,9 @@
 # 2、概述
 
 ## 2.1 开发中的实际场景
-```tex
+```txt
 场景一： 备份
  	小明负责的模块就要完成了，就在即将Release之前的一瞬间，电脑突然蓝屏，硬盘光荣牺牲！几个月以来的努力付之东流。
-
 
 场景二：代码还原
 	这个项目中需要一个很复杂的功能，老王摸索了一个星期终于有眉目了，可是这被改得面目全非的代码已经回不到从前了。
@@ -30,11 +29,10 @@
     老王是另一位项目经理，每次因为项目进度挨骂之后，他都不知道该扣哪个程序员的工资！就拿这次来说吧，
 有个bug调试了30多个小时才知道是因为相关属性没有在应用初始化时赋值！可是二胖、王东、刘流和正经牛都不承认是自己干的！
 
-
 ```
 
 ## 2.2 版本控制器的方式
-```tex
+```txt
 a、 集中式版本控制工具
    集中式版本控制工具，版本库是集中式存放在中央服务器的。team里每个人work时从中央服务器下载代码，是必须联网才能工作，
 局域网或互联网，个人修改后然后提交到中央版本库。
@@ -44,13 +42,9 @@ b、 分布式版本控制工具
 电脑上，多人协作只需要各自的修改推送给对方，就能互相看到对方的修改了。
 
 举例子： git
-  
-  
 ```
 ## 2.3 SVN
 ![图片说明](./image/svn.jpg)
-
-
 
 
 
@@ -87,8 +81,6 @@ b、 分布式版本控制工具
 	7.push(推送)：修改完成后，需要和团队成员共享代码时，将代码推送到远程仓库
 	
 ```
-
-
 
 # 3、Git安装与常用命令
 
@@ -268,8 +260,6 @@ git commit -m '注释内容'
 
 
 
-
-
 ### 3.3.4 *查看提交日志（log）
 
 **在3.1.3中配置的别名git-log 就包含了这些参数，所以后续可以直接使用指令git-log**
@@ -283,14 +273,6 @@ git commit -m '注释内容'
 				- --pretty=oneline 将提交信息显示为一行
 				- --abbrev-commit 使得输出的commitId更简短
 				- --graph 以图的形式显示
-
-
-
-
-
-
-
-
 
 
 
@@ -328,13 +310,9 @@ git reflog
 ```txt
 备注说明：这里的命令git add . 是指的把当前目录的所有文件都加入到暂存区。你也可以使用 git add test001.txt ，表示的是把文件 test001.txt 放入到暂存区！！！
 
-
 备注：这里的命令： git commit -m “add file01” 表示的是把文件提交到本地仓库，同时写好提交的的message信息。
 
-
 备注：这里的命令： git log  指令可以看到提交的日志记录信息！！！
-
-
 
 ```
 
@@ -554,15 +532,39 @@ git-log
 - 创建并切换分支               git checkout -b 分支名
 - 分支合并                          git merge 分支名
 
-​				- 分支合并第一步，首先要切换到目标分支，然后进行切换
+​				- 分支合并第一步，首先要切换到目标分支，然后进行切换   
 
-![git_summary1.png](./image/git_summary1.png)
+- 远程仓库
+
+​				-- remote add 
+
+​                -- push 
+
+​                -- clone
+
+​                -- fetch
+
+ 			   -- pull (fetch + merge)
+
+- idea操作
+
+​				-- 这是今天最重要的一个知识点。
+
+​				-- 找到一个最合适你自己的操作方式。
+
+- 统一使用JDK8
+- IDEA安装lombox插件
+- IDEA安装 free mybatis插件
+
+![](./image/git_summary1.png)
 
 
 
 ![git_summary2.png](./image/git_summary2.png)
 
 
+
+![git_summary3.png](./image/git_summary3.png)
 
 # 4、Git远程仓库
 
@@ -782,9 +784,9 @@ git-log
 
 安装好IntelliJ IDEA后，如果Git安装在默认路径下，那么idea会自动找到git的位置，如果更改了Git的安装位置则需要手动配置下Git的路径。选择File-》settings打开设置窗口，找到Version Control下的git选项：
 
-![git_idea_set01.png](git_idea_set01.png)
+![git_idea_set01.png](./image/git_idea_set01.png)
 
-![git_idea_set02.png](git_idea_set02.png)
+![git_idea_set02.png](./image/git_idea_set02.png)
 
 
 
@@ -830,16 +832,95 @@ git-log
 
 ![git_resolve_conflict.png](./image/git_resolve_conflict.png)
 
+![git_resolve_conflict1.png](./image/git_resolve_conflict1.png)
+
+![git_resolve_conflict2.png](./image/git_resolve_conflict2.png)
+
 ## 5.3 IDEA常用GIT操作入口
+
+1.第一张图上的快捷入口可以基本满足开发的需求。
+
+
+
+![Idea_handle_git_01](./image/Idea_handle_git_01.png)
+
+
+
+2.第二张图是更多的IDEA操作git的入口。
+
+![Idea_handle_git_02.png](./image/Idea_handle_git_02.png)
+
+
 
 ## 5.4 场景分析
 
-附: 几条铁令
-附：疑难问题解决
-  1.windows下看不到隐藏的文件（.bashrc \ .gitignore）
-  2.windows下无法创建.ignore|.bashrc文件
+​	基于我们后面的实战模式，我们做一个综合练习
 
-附：IDEA集成GitBash作为Terminal
+​	当前的开发环境如下，我们每个人都对这个项目已经开发一段时间，接下来我们要切换成团队开发模式。
+
+也就是我们由一个团队来完成这个项目实战的内容。团队有组长和若干组员组成（组长就是开发中的项目经理）。
+
+所有操作都在idea中完成。
+
+
+
+练习场景如下：
+
+1、由组长，基于本项目创建本地仓库；创建远程仓库，推送项目到远程仓库。
+
+![scene1.png](./image/scene1.png)
+
+
+
+2、每一位组员从远程仓库克隆项目到idea中；这样每位同学在自己电脑上就有了一个工作副本，可以正式的开始开发了。我们模拟两个组员（组员A、组员B），克隆两个工作区。
+
+![scene2.png](./image/scene2.png)
+
+
+
+3、组员A修改工作区，提交到本地仓库，再推送到远程仓库。组员B可以直接从远程仓库获取最新的代码。
+
+![scene3.png](./image/scene3.png)
+
+4、组员A和组员B修改了同一个文件的同一行，提交到本地没有问题，但是推送到远程仓库时，后一个推送操作就会失败。
+
+解决方案：需要先获取远程仓库的代码到本地仓库，编辑冲突，提交并且推送代码。
+
+![scene4.png](./image/scene4.png)
+
+
+
+附: 几条铁令
+
+1.**切换分支前先提交本地的修改**
+
+2.代码及时提交，提交过了就不会丢
+
+3.遇到任何问题都不要删除文件目录。
+
+
+
+**附：疑难问题解决**
+  **1.windows下看不到隐藏的文件（.bashrc \ .gitignore）**
+
+![git_windows_hide.png](./image/git_windows_hide.png)
+
+  **2.windows下无法创建.ignore|.bashrc文件**
+
+这里以创建.ignore文件为例：
+
+- 在git目录下打开gitbash
+- 执行指令touch  .gitignore
+
+![git_touch_ignore.png](./image/git_touch_ignore.png)
+
+**附：IDEA集成GitBash作为Terminal**
+
+![git_terminal.png](./image/git_terminal.png)
+
+
+
+
 
 
 
